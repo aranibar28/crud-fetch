@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD CON API</title>
+    <link rel="stylesheet" href="assets/main.css" />
+  </head>
+  <body>
+    <form>
+      <div>
+        <input type="hidden" />
+      </div>
+      <div>
+        <input class="input" type="text" placeholder="Nombre" required />
+      </div>
+      <div>
+        <label>F<input type="radio" value="f" name="sex" checked /></label>
+        <label>M<input type="radio" value="m" name="sex" /></label>
+      </div>
+      <div>
+        <select name="" id="">
+          <option value="">Selecciona tu grado</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div>
+        <button type="button" class="js-register btn btn-info">Registrar</button>
+        <button type="button" class="js-edit btn btn-success">Editar</button>
+      </div>
+    </form>
+
+    <div id="app-container" class="grid card-container"></div>
+
+    <script src="assets/main.js"></script>
+  </body>
+</html>

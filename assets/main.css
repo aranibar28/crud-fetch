@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 30px 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form {
+  text-align: center;
+  max-width: 420px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f0efef;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.input,
+select {
+  max-width: 200px;
+  margin: 5px;
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+ul{
+  padding-left: 0;
+}
+
+li{
+  list-style: none;
+  line-height: 30px;
+}
+
+article{
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  transition: box-shadow 0.5s ease;
+}
+
+article:hover {
+  box-shadow: 0 0 10px #cdcdcd;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.btn {
+  width: 80px;
+  height: 30px;
+  color: white;
+  padding: 5px 10px;
+  margin-top: 15px;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:active {
+  box-shadow: 0 0 3px black;
+}
+
+.btn-info {
+  color: black;
+  background-color: #0dcaf0;
+}
+
+.btn-success {
+  background-color: #198754;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+.btn-warning {
+  color: black;
+  background-color: #ffc107;
+}

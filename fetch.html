@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Apis</title>
+  </head>
+  <body>
+    <h3>Personajes</h3>
+    <div id="app-container"></div>
+    <br />
+    <button>Siguiente</button>
+
+    <script>
+      function createCard(value) {
+        console.log("values", value);
+        const { name, climate, population } = value; //drestructuracion
+        const appContainer = document.getElementById("app-container");
+        const card = document.createElement("article");
+        card.innerHTML = `${name}`;
+
+        appContainer.appendChild(card);
+      }
+
+      fetch("https://swapi.dev/api/people/") //referenciado al recurso
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (personas) {
+          console.log("personas", personas); //planetas
+          personas.results.forEach((person) => {
+            createCard(person);
+          });
+        })
+        .catch(function (error) {
+          console.log("catch !!", error);
+        });
+
+      const btn = document.querySelector("button");
+      let num = 1;
+      btn.addEventListener("click", function () {
+ 
+        num = num + 1;
+
+        fetch(`https://swapi.dev/api/people/?page=${num}`) //referenciado al recurso
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (personas) {
+            console.log("personas", personas); //planetas
+            personas.results.forEach((person) => {
+              createCard(person);
+            });
+          })
+          .catch(function (error) {
+            console.log("catch !!", error);
+            alert("Ha llegado al limite de personajes")
+          });
+      });
+    </script>
+  </body>
+</html>

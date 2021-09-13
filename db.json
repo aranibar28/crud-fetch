@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "name": "Gerson",
+      "grado": "1",
+      "sexo": "m",
+      "id": 1
+    },
+    {
+      "name": "Vilma",
+      "grado": "2",
+      "sexo": "f",
+      "id": 2
+    },
+    {
+      "name": "Maribel",
+      "grado": "3",
+      "sexo": "f",
+      "id": 3
+    },
+    {
+      "name": "Clara",
+      "grado": "4",
+      "sexo": "f",
+      "id": 4
+    }
+  ]
+}
